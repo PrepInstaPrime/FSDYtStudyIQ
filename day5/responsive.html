@@ -3,9 +3,143 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Responsive Design</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-size: 20px;
+            box-sizing: border-box;
+        }
+        .header{
+            border: 1px solid black;
+            height: 5vh;
+            background-color: black;
+        }
+
+        .container{
+            border: 2px solid red;
+            display: flex;
+        }
+        .content{
+            border: 1px solid blue;
+            height: 90vh;
+            width: 75vw;
+            padding: 10px;
+        }
+        .leftNav{
+            border: 1px solid green;
+            height: 90dvh;
+            width: 25vw;
+        }
+        .footer{
+            border: 1px solid black;
+            height: 5vh;
+        }
+        .navItems{
+            display: flex;
+            list-style: none;
+            align-items: center;
+            /*justify-content: center;*/
+        }
+        .navItem{
+            margin: 10px;
+            font-weight: 600;
+            color: rgb(253, 253, 253);
+        }
+        .leftNavItems{
+            display: flex;
+            list-style: none;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            margin-top: 10vh;
+        }
+        .leftNavItem{
+            border: 1px solid lightblue;
+            width: 20vw;
+            padding: 10px;
+            border-radius: 10px;
+            padding-left: 2rem;
+            /*text-align: center;*/
+        }
+        .leftNavItem:hover{
+            background-color: black;
+            color: white;
+        }
+        .footer{
+            background-color: black;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .content >img{
+            width: 73vw;
+        }
+        @media (max-width:600px){
+            .header{
+                height: 10vh;
+            }
+            .navItems{
+                flex-wrap: wrap;
+            }
+            .container{
+                flex-direction: column;
+            }
+            .leftNav{
+                width: 100vw;
+                height: fit-content;
+            }
+            .leftNavItem{
+                width: 70vw;
+                margin-top: -10px;
+            }
+            .leftNavItems{
+                margin-top: 30px;
+                margin-bottom: 10px;
+            }
+            .content{
+                width: 99vw;
+            }
+            .content>img{
+                width: 100%;
+            }
+        }
+    </style>
 </head>
 <body>
-    https://github.com/PrepInstaPrime
+    <!-- https://github.com/PrepInstaPrime/FSDYtStudyIQ -->
+    <div class="header">
+        <ul class="navItems">
+            <li class="navItem">Home</li>
+            <li class="navItem">About</li>
+            <li class="navItem">Media</li>
+            <li class="navItem">Contact</li>
+            <li class="navItem">Services</li>
+            <li class="navItem">Login</li>
+        </ul>
+    </div>  
+    <div class="container">
+        <div class="leftNav">
+            <ul class="leftNavItems">
+                <li class="leftNavItem">HTML</li>
+                <li class="leftNavItem">CSS</li>
+                <li class="leftNavItem">JavaScript</li>
+                <li class="leftNavItem">React JS</li>
+                <li class="leftNavItem">Reudx</li>
+                <li class="leftNavItem">Node js</li>
+                <li class="leftNavItem">MongoDB</li>
+                <li class="leftNavItem">Express JS</li>
+            </ul>
+        </div>
+        <div class="content">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, reprehenderit molestias tempore quasi tempora at nisi cumque, assumenda quaerat, explicabo necessitatibus ex. Odit nostrum aut delectus doloremque, dolores a corrupti culpa aspernatur quasi quam consequuntur magni nam blanditiis ipsa deserunt porro expedita est deleniti quibusdam repudiandae quo nihil quod. Incidunt voluptatibus suscipit nisi odio numquam esse aut libero iusto, laudantium praesentium. Facere aperiam unde illum, saepe magni, quaerat ducimus enim cum laboriosam quas repellendus consectetur ipsa vero non ullam veniam, sint ad fugiat voluptatum doloribus! Sed beatae recusandae distinctio, id quisquam omnis? Earum officia animi magni impedit ipsa illum adipisci.</p>
+            <img src="./image.png" alt="image">
+        </div>
+    </div>
+    <div class="footer">
+        Footer
+    </div>
 </body>
 </html>
