@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Signup Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        form {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 400px;
+        }
+        form h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 600;
+            color: #555;
+        }
+        input, select, textarea, button {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+        input:focus, select:focus, textarea:focus {
+            border-color: #007bff;
+            outline: none;
+        }
+        button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        textarea {
+            resize: none;
+        }
+    </style>
+    
+</head>
+<body>
+    <form>
+        <h2>Signup Form</h2>
+        
+        <div class="form-group">
+            <label for="user">Name:</label>
+            <input type="text" id="user" placeholder="Enter Your Name">
+        </div>
+        
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" placeholder="Enter Your Email">
+        </div>
+        
+        <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" placeholder="Create Password">
+        </div>
+        
+        <div class="form-group">
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" placeholder="Enter Your Phone Number">
+        </div>
+        
+        <div class="form-group">
+            <label for="age">Age:</label>
+            <input type="number" id="age" placeholder="Enter Your Age">
+        </div>
+        
+        <div class="form-group">
+            <label for="subject">Subject:</label>
+            <select id="subject">
+                <option value="">Choose Subject</option>
+                <option value="Maths">Maths</option>
+                <option value="Chemistry">Chemistry</option>
+                <option value="HTML">HTML</option>
+            </select>
+        </div>
+        
+        <div class="form-group">
+            <label for="class">Class:</label>
+            <input type="text" id="class" list="class-options">
+            <datalist id="class-options">
+                <option value="10th"></option>
+                <option value="12th"></option>
+            </datalist>
+        </div>
+        
+        <div class="form-group">
+            <label for="file">File:</label>
+            <input type="file" id="file" accept=".jpg,.png,.pdf">
+        </div>
+        
+        <div class="form-group">
+            <label for="address">Address:</label>
+            <textarea id="address" placeholder="Enter Your Address" cols="30" rows="4"></textarea>
+        </div>
+        
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
