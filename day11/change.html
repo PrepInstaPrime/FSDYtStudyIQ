@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css style</title>
+</head>
+<body>
+    <div class="container">
+        <p id="para">Hey i am paragraph</p>
+        <h3 id="heading">Let's learn</h3>
+    </div>
+    <div id="msg"></div>
+    <div class="para10"></div>
+    <button onclick="changeColor()">change color</button>
+    <button onclick="generate()">create heading</button>
+    <button onclick="deleteEle()">delete heading</button>
+    <button onclick="generateParagraphs()">generate 10 paragraphs</button>
+    <button onclick="clearParagraphs()">clear paragraphs</button>
+    <script>
+        let para= document.getElementById("para");
+        let contain= document.getElementsByClassName("container");
+        function changeColor(){
+             //para.style.backgroundColor="blue"
+             para.style.color="red"
+             contain[0].style.backgroundColor="yellow"
+        }
+        let message= document.getElementById("msg");
+        function generate(){
+            let newElement= document.createElement('h1');
+            newElement.innerText="Hey i am new";
+            newElement.setAttribute("id","newHeading");
+            message.appendChild(newElement);
+        }
+        function deleteEle(){
+            let ele= document.getElementById("newHeading")
+            message.removeChild(ele)
+        }
+
+        function generateParagraphs(){
+            let para10= document.getElementsByClassName("para10");
+            for(let i=0; i<10; i++){
+                let newPara= document.createElement('p');
+                newPara.innerText="This is paragraph "+(i+1);
+                para10[0].appendChild(newPara);
+            }
+        }
+        
+        // Additional function to clear paragraphs
+        function clearParagraphs(){
+            let para10= document.getElementsByClassName("para10")[0];
+            while (para10.firstChild) {
+                para10.removeChild(para10.firstChild);
+            }
+        }
+       
+    </script>
+</body>

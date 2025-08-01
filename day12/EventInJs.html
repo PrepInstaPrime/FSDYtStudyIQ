@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>event example</title>
+</head>
+<body>
+    <p class="para">This is a new paragraph added to the document.</p>
+    <button id="alertButton" onclick="alertmess()">Click me!</button>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam iusto ipsam consectetur excepturi a mollitia voluptatem minus omnis architecto animi deserunt, perferendis recusandae culpa voluptates nisi voluptatum veritatis nobis laboriosam debitis. Reiciendis porro asperiores, minus dicta dolores numquam, inventore veniam, molestiae eligendi voluptatum consequatur placeat deleniti mollitia ab nihil necessitatibus laudantium amet. Maxime incidunt natus totam minus delectus! Vitae excepturi culpa quidem laboriosam impedit! Modi necessitatibus, vitae voluptatem rerum, corrupti accusantium soluta perspiciatis inventore placeat tempore ipsum! Similique illum, earum alias nihil ab optio aliquam doloribus voluptatem aut? Officia ad ipsam sunt, enim voluptatibus corrupti quo, accusantium odit libero placeat necessitatibus eveniet quae! Aliquam perferendis quo sint rerum a accusamus deserunt hic labore atque! Provident repudiandae culpa pariatur enim quos nihil vel sed ea quod dolore, modi tempora ipsum. Ad iste vitae sapiente dolorem quas sint sunt, pariatur impedit repudiandae accusantium nam magnam veritatis voluptatum debitis quis expedita in natus maiores. Voluptatibus enim quo quisquam esse. Sequi nulla accusantium cum, magni modi, nam velit vitae officiis, pariatur atque distinctio enim ducimus! Tempora veritatis deleniti excepturi sequi voluptatum? Sit ipsam esse, obcaecati laboriosam ducimus sequi quae mollitia quam at quis modi explicabo id assumenda ex totam reprehenderit est incidunt ratione nulla natus animi tempore! Facere nam distinctio impedit ipsa temporibus aut dolores magni sapiente rerum molestiae voluptatem libero totam accusantium eaque, error harum repellat aperiam, rem adipisci fugiat magnam alias consequatur dolore officiis? Eius accusantium laudantium nobis, soluta dolorum harum aspernatur sapiente aperiam temporibus ullam tempora minima saepe! Adipisci earum, facilis quasi tempore enim optio voluptate hic corporis laboriosam et ullam eaque! Repellat sed voluptatem, velit nihil rem maiores veritatis ratione illum molestias facere ut fugiat numquam maxime, esse aperiam ducimus quod! Doloribus, iure repellendus recusandae voluptatem eveniet illum aspernatur officia explicabo quaerat facilis molestias! Facilis in cupiditate, illum aliquam, adipisci repudiandae ut excepturi consequuntur, itaque consectetur similique doloribus. Architecto quis perferendis, nisi iste error placeat ipsam nobis? Culpa deleniti, cupiditate quaerat perferendis praesentium laudantium repellendus quibusdam exercitationem rerum ullam quis! Atque, repudiandae. Cum veritatis deserunt, autem reprehenderit in soluta ab recusandae natus nemo enim nam eius cumque ratione unde, hic voluptates modi quisquam dignissimos dolore saepe repellendus atque corporis fugiat. Nostrum pariatur sunt temporibus magni ullam distinctio quidem saepe tenetur molestiae cupiditate, voluptatibus, eos iusto veritatis fugit sequi! Magni officiis non, expedita atque dolor itaque aut sequi at quia voluptates. Repudiandae incidunt voluptate, iusto voluptatem quia nam suscipit similique non, corporis obcaecati ducimus odio explicabo cum maxime eveniet delectus, omnis earum ullam quod velit consectetur? Quam nihil similique recusandae debitis adipisci quis saepe quos fugiat numquam tempora cum excepturi, suscipit accusamus, sapiente animi tenetur. Adipisci provident, modi aliquid beatae porro voluptate laborum explicabo maiores corporis obcaecati vitae facilis nemo in expedita eius quod, reiciendis quisquam eos pariatur alias exercitationem deserunt. Quasi quisquam iusto illum eius recusandae quia, provident architecto possimus, voluptatum quos ducimus nihil illo commodi eveniet quis voluptate quo quam repudiandae. Mollitia totam neque animi magni! Ipsum error quas quasi, saepe commodi dolorum sint, quos quam sed a id.</p>
+    <script>
+
+        // Adding an event listener to the paragraph
+        const paragraph = document.querySelector('.para');
+        paragraph.addEventListener('click', function() {
+            alert('Paragraph clicked!');
+        });
+        function alertmess() {
+            alert('hey class welcome to the event example');
+        }
+        window.addEventListener('load', function() {
+            console.log('Page has loaded successfully!');
+            alert('Page has loaded successfully!');
+        });
+        // Mouseover event
+        paragraph.addEventListener('mouseover', function() {
+            console.log('Mouse is over the paragraph!');
+        });
+
+        // Keydown event
+        document.addEventListener('keydown', function(event) {
+            console.log(`Key pressed: ${event.key}`);
+        });
+
+        // Focus event
+        const inputField = document.createElement('input');
+        inputField.type = 'text';
+        inputField.placeholder = 'Focus on me!';
+        document.body.appendChild(inputField);
+        inputField.addEventListener('focus', function() {
+            console.log('Input field is focused!');
+        });
+
+        // Blur event
+        inputField.addEventListener('blur', function() {
+            console.log('Input field lost focus!');
+        });
+
+        // Change event
+        const selectElement = document.createElement('select');
+        const option1 = document.createElement('option');
+        option1.value = 'option1';
+        option1.textContent = 'Option 1';
+        const option2 = document.createElement('option');
+        option2.value = 'option2';
+        option2.textContent = 'Option 2';
+        selectElement.appendChild(option1);
+        selectElement.appendChild(option2);
+        document.body.appendChild(selectElement);
+        selectElement.addEventListener('change', function() {
+            console.log(`Selected value: ${selectElement.value}`);
+        });
+
+        // Submit event
+        const form = document.createElement('form');
+        const submitButton = document.createElement('button');
+        submitButton.type = 'submit';
+        submitButton.textContent = 'Submit';
+        form.appendChild(inputField.cloneNode(true)); // Clone input field for form
+        form.appendChild(submitButton);
+        document.body.appendChild(form);
+        form.addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form submission
+            console.log('Form submitted!');
+        });
+
+        // Resize event
+        window.addEventListener('resize', function() {
+            console.log('Window resized!');
+        });
+
+        // Scroll event
+        window.addEventListener('scroll', function() {
+            console.log('Page scrolled!');
+        });
+
+        // Contextmenu event
+        document.addEventListener('contextmenu', function(event) {
+            event.preventDefault(); // Prevent default context menu
+            console.log('Right-click detected!');
+        });
+    </script>
+</body>
+</html>

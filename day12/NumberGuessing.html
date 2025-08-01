@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Guessing Game</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: black;
+            color: #fff;
+        }
+
+        .game-container {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        p {
+            margin: 10px 0;
+        }
+
+        input[type="number"] {
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            outline: none;
+            width: 80%;
+            max-width: 300px;
+            margin-bottom: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #ff4d6d;
+            color: #fff;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #ff2a4d;
+            transform: scale(1.1);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="game-container">
+        <h1>Welcome to the Number Guessing Game!</h1>
+        <p>Write a number between 1 to 100</p>
+        <input type="number" id="guessInput" placeholder="Enter your guess">
+        <button id="guessButton">Guess</button>
+        <p id="resultMessage"></p>
+        <p id="attemptsMessage"></p>
+    </div>
+    <script>
+        const randomNumber = Math.floor(Math.random() * (101 - 1)) + 1;
+        let attempts = 0;
+
+        document.getElementById('guessButton').addEventListener('click', function() {
+            const userGuess = parseInt(document.getElementById('guessInput').value);
+            attempts++;
+            let resultMessage = '';
+            let attemptsMessage = `Attempts: ${attempts}`;
+
+            if (userGuess < 1 || userGuess > 100 || isNaN(userGuess)) {
+                resultMessage = 'Please enter a valid number between 1 and 100.';
+            } else if (userGuess < randomNumber) {
+                resultMessage = 'Too low! Try again.';
+            } else if (userGuess > randomNumber) {
+                resultMessage = 'Too high! Try again.';
+            } else {
+                resultMessage = `Congratulations! You've guessed the number ${randomNumber} in ${attempts} attempts.`;
+            }
+
+            document.getElementById('resultMessage').textContent = resultMessage;
+            document.getElementById('attemptsMessage').textContent = attemptsMessage;
+        });
+    </script>
+</body>
+</html>

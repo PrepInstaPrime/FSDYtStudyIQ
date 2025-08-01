@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #img{
+            width: 200px;
+            height: 300px;
+        }
+       
+    </style>
+</head>
+<body>
+    <img id="img" src="./offbulb.png" alt="">
+    <button onclick="turnOn()">turn on</button>
+    <button onclick="turnOf()">turn off</button>
+    <script>
+        let image= document.getElementById('img');
+        function turnOn(){
+            image.setAttribute('src','./glowing.png');
+        }
+        function turnOf(){
+            image.setAttribute('src','./offbulb.png');
+        }
+    </script>
+</body>
+</html>
