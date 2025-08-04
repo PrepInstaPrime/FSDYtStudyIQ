@@ -1,0 +1,10 @@
+.custombutton {
+    background-image: linear-gradient(to right, #4facfe, #00f2fe);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 10px 20px;
+}
