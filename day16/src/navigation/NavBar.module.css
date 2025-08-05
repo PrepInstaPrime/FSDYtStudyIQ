@@ -1,0 +1,22 @@
+.navigation{
+    background-color: rgb(12, 230, 12);
+    border: 1px solid black;
+}
+.navitems{
+    display: flex;
+    padding: 10px;
+    list-style: none;
+}
+.navitem{
+   margin-left: 2rem;
+   font-weight: 550;
+   font-size: 20px;
+}
+.navitem a{
+    text-decoration: none;
+    color: black;
+}
+.navitem a:hover{
+    color: rgb(211, 11, 11);
+    text-decoration: none;
+}
