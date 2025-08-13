@@ -1,0 +1,103 @@
+.page {
+  min-height: 100vh;
+  background: #fff;
+  color: #222;
+}
+
+.container {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 40px 24px;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 28px;
+}
+
+.brandBlock {
+  display: grid;
+  align-content: center;
+  background: linear-gradient(135deg, #fff5f6, #f3fbff);
+  border-radius: 18px;
+  padding: 32px;
+  border: 1px solid #f0f0f0;
+}
+
+.brandBlock h1 {
+  color: #e23744;
+  font-size: 48px;
+  margin: 0 0 8px;
+}
+
+.brandBlock p {
+  margin: 0;
+  color: #555;
+}
+
+.card {
+  align-self: center;
+  border: 1px solid #f0f0f0;
+  border-radius: 18px;
+  padding: 24px;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.05);
+}
+
+.card h2 {
+  margin: 0 0 6px;
+}
+
+.sub {
+  margin: 0 0 14px;
+  color: #666;
+}
+
+.form {
+  display: grid;
+  gap: 12px;
+}
+
+.form label {
+  display: grid;
+  gap: 6px;
+  font-weight: 600;
+}
+
+.form input {
+  border: 1px solid #e5e5e5;
+  border-radius: 10px;
+  padding: 10px 12px;
+  font-size: 15px;
+}
+
+.submit {
+  margin-top: 6px;
+  background: #e23744;
+  color: #fff;
+  border: none;
+  padding: 10px 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.submit:hover {
+  background: #cf2231;
+}
+
+.alt {
+  margin-top: 12px;
+  font-size: 14px;
+}
+
+.alt a {
+  color: #e23744;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+@media (max-width: 900px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+}
+
+

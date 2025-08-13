@@ -1,0 +1,101 @@
+.page {
+  min-height: 100vh;
+  background: #ffffff;
+  color: #222;
+}
+
+.header {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 40px 24px 10px;
+}
+
+.header h1 {
+  margin: 0 0 6px;
+}
+
+.header p {
+  margin: 0;
+  color: #555;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+  max-width: 1080px;
+  margin: 18px auto 40px;
+  padding: 0 24px;
+}
+
+.card {
+  border: 1px solid #f0f0f0;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #fff;
+  display: grid;
+  grid-template-rows: 140px auto;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.05);
+}
+
+.art {
+  display: grid;
+  place-items: center;
+  font-size: 48px;
+  background: linear-gradient(135deg, #fff5f6, #f3fbff);
+}
+
+.info {
+  padding: 14px;
+}
+
+.topRow {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.price {
+  font-weight: 700;
+  color: #1b9aaa;
+}
+
+.desc {
+  margin: 6px 0 10px;
+  color: #555;
+}
+
+.meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.chip {
+  background: #eef9fb;
+  color: #168a98;
+  border: 1px solid #d7f0f4;
+  border-radius: 999px;
+  padding: 4px 10px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.addBtn {
+  width: 100%;
+  background: #e63946;
+  color: #fff;
+  border: none;
+  padding: 10px 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.addBtn:hover {
+  background: #d62839;
+}
+
+

@@ -1,0 +1,185 @@
+/* Page wrapper */
+.page {
+  min-height: 100vh;
+  background: #ffffff;
+  color: #222;
+}
+
+/* Hero */
+.hero {
+  min-height: 68vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(1000px 500px at 10% -10%, #ffe5e9 0%, rgba(255, 255, 255, 0) 60%),
+              radial-gradient(900px 400px at 110% 0%, #e0f7f4 0%, rgba(255, 255, 255, 0) 60%),
+              linear-gradient(180deg, #fff, #fff);
+}
+
+.heroContent {
+  width: 100%;
+  max-width: 1080px;
+  padding: 64px 24px 56px;
+  text-align: center;
+}
+
+.title {
+  font-size: 44px;
+  line-height: 1.1;
+  letter-spacing: -0.5px;
+  margin: 0 0 14px;
+}
+
+.subtitle {
+  margin: 0 auto 22px;
+  max-width: 720px;
+  color: #555;
+}
+
+.searchBar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  max-width: 560px;
+  margin: 0 auto;
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 14px;
+  padding: 8px 8px 8px 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+}
+
+.searchBar input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 16px;
+}
+
+.searchBar button {
+  background: #e63946;
+  color: #fff;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.searchBar button:hover {
+  background: #d62839;
+}
+
+/* Features */
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  width: 100%;
+  max-width: 1080px;
+  margin: -36px auto 0;
+  padding: 0 24px 24px;
+}
+
+.featureCard {
+  background: #fff;
+  border: 1px solid #f0f0f0;
+  border-radius: 16px;
+  padding: 18px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  text-align: left;
+}
+
+.featureEmoji {
+  font-size: 24px;
+}
+
+.featureCard h3 {
+  margin: 10px 0 6px;
+}
+
+.featureCard p {
+  margin: 0;
+  color: #555;
+}
+
+/* Menu */
+.menu {
+  width: 100%;
+  max-width: 1080px;
+  padding: 56px 24px 32px;
+  margin: 0 auto;
+}
+
+.menu h2 {
+  margin: 0 0 18px;
+}
+
+.menuGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.menuCard {
+  background: #fff;
+  border: 1px solid #f0f0f0;
+  border-radius: 16px;
+  overflow: hidden;
+  display: grid;
+  grid-template-rows: 120px auto;
+}
+
+.menuArt {
+  display: grid;
+  place-items: center;
+  font-size: 42px;
+  background: linear-gradient(135deg, #fff5f6, #f3fbff);
+}
+
+.menuInfo {
+  padding: 14px;
+}
+
+.menuInfo h4 {
+  margin: 0 0 6px;
+}
+
+.menuInfo p {
+  margin: 0 0 12px;
+  color: #555;
+}
+
+.menuInfo button {
+  background: #1b9aaa;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.menuInfo button:hover {
+  background: #168a98;
+}
+
+/* Footer */
+.footer {
+  padding: 28px 24px 48px;
+  text-align: center;
+  color: #777;
+}
+
+@media (max-width: 600px) {
+  .title {
+    font-size: 34px;
+  }
+
+  .heroContent {
+    padding: 48px 18px 40px;
+  }
+}
+
+

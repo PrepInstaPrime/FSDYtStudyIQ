@@ -1,0 +1,76 @@
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 22px;
+  background: rgba(255, 255, 255, 0.85);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid #eee;
+}
+
+.brand {
+  font-weight: 800;
+  font-size: 20px;
+  color: #e63946;
+  letter-spacing: 0.5px;
+}
+
+.links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+}
+
+.links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+.links a:hover {
+  color: #e63946;
+}
+
+.cta {
+  background: #e63946;
+  color: #fff;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.cta:hover {
+  background: #d62839;
+}
+
+.authActions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.loginBtn {
+  color: #333;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.loginBtn:hover {
+  color: #e63946;
+}
+
+@media (max-width: 768px) {
+  .links {
+    display: none;
+  }
+}
+
+
