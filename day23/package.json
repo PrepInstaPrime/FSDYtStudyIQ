@@ -1,0 +1,19 @@
+{
+  "name": "backendsetup",
+  "version": "1.0.0",
+  "description": "this is test package for setup",
+  "keywords": [
+    "backend",
+    "testing"
+  ],
+  "license": "MIT",
+  "author": "yt learners",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
